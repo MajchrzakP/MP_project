@@ -39,9 +39,7 @@ __global__ void integral(double x_1, double x_2, double d,double *results){
 }
 
 int main() {
-  //measuring the running time of the entire program
-
-
+  
   double x_1=-5.,x_2=5.;//integration limits
   double d=0.001; //length of step
   int N=(x_2-x_1)/d; //number of steps
@@ -78,7 +76,7 @@ int main() {
     t_time[i]=chrono::duration_cast<chrono::microseconds> (e_r1 - s_r1).count();
     // wyswietlanie otrzymanych czasow
     cout<<i+1<<". "<<t_time[i]<<endl;
-    //filtrowanie anomalnie du¿ych wyników
+    //filtrowanie anomalnie duÂ¿ych wynikÃ³w
     if (t_time[i]<500){
       mean+=t_time[i];
       m++;
